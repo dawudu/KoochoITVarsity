@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    style="?pageBackground"
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
@@ -11,8 +12,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/splash"
         android:textSize="30sp"
+        style="?textLarge"
         android:text="Koocho"
-        android:textColor="@color/purple_200"
+        android:textColor="@color/color_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
