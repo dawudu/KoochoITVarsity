@@ -9,67 +9,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_marginTop="50dp"
+      android:orientation="vertical"
+        android:layout_height="wrap_content">
+      <TextView
+          android:layout_marginStart="50dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/splash"
+          android:textSize="30sp"
+          style="?textLarge"
+          android:textColor="@color/white"
+          android:text=" Available Products"
+         />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/firstActivity"
-            android:text="First Activity"
-            android:textSize="26sp"
-            style="@android:style/ButtonBar"
-            android:textColor="@color/white"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="409dp"
+            android:layout_height="729dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:id="@+id/secondActivity"
-            android:layout_height="wrap_content"
-            android:text="Second Activity"
-            android:layout_below="@+id/firstActivity"
-            android:textSize="26sp"
-            style="@android:style/ButtonBar"
-            android:textColor="@color/white"
-            android:layout_marginTop="150dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
 
-            />
+ </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:id="@+id/thirdActivity"
-            android:layout_height="wrap_content"
-            android:text="Third Activity"
-            android:textSize="26sp"
-            style="@android:style/ButtonBar"
-            android:textColor="@color/white"
-            android:layout_marginTop="290dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
 
-            />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 <com.google.android.material.navigation.NavigationView
-    android:layout_width="wrap_content"
-    android:id="@+id/nav_view"
-    android:layout_gravity="start"
-    android:fitsSystemWindows="true"
-    app:headerLayout="@layout/nav_header"
+ android:layout_width="wrap_content"
+  android:id="@+id/nav_view"
+  android:layout_gravity="start"
+ android:fitsSystemWindows="true"
+   app:headerLayout="@layout/nav_header"
     app:menu="@menu/nav_menu"
-    android:layout_height="match_parent"/>
+  android:layout_height="match_parent"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+    </LinearLayout>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
